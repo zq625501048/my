@@ -13,7 +13,7 @@
     <!-- Enables the Spring MVC @Controller programming model -->  
     <mvc:annotation-driven />  
       
-    <context:component-scan base-package="cn.mylove.www.action.*Action" />  
+    <context:component-scan base-package="cn.mylove.www.*" />  
       
     <!-- Handles HTTP GET requests for /static/** by efficiently serving up static resources in the ${webappRoot}/static/ directory -->  
     <mvc:default-servlet-handler /><!-- 默认静态资源 -->
@@ -26,7 +26,7 @@
     <!-- 视图渲染 jsp/freemaker/velocity-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
    		<!-- 制定页面存放的路径 -->
-   		<property name="prefix" value="/WEB-INF/pages"></property>
+   		<property name="prefix" value="/WEB-INF/pages/"></property>
    		<!-- 文件的后缀 -->
    		<property name="suffix" value=".jsp"></property>
     </bean>   
