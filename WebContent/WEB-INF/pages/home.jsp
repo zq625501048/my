@@ -10,15 +10,11 @@
 <script type="text/javascript" src="./js/jscex.min.js"></script>
 <script type="text/javascript" src="./js/jscex-parser.js"></script>
 <script type="text/javascript" src="./js/jscex-jit.js"></script>
-<script type="text/javascript"
-	src="./js/jscex-builderbase.min.js"></script>
+<script type="text/javascript" src="./js/jscex-builderbase.min.js"></script>
 <script type="text/javascript" src="./js/jscex-async.min.js"></script>
-<script type="text/javascript"
-	src="./js/jscex-async-powerpack.min.js"></script>
-<script type="text/javascript" src="./js/functions.js"
-	charset="utf-8"></script>
-<script type="text/javascript" src="./js/love.js"
-	charset="utf-8"></script>
+<script type="text/javascript" src="./js/jscex-async-powerpack.min.js"></script>
+<script type="text/javascript" src="./js/functions.js" charset="utf-8"></script>
+<script type="text/javascript" src="./js/love.js" charset="utf-8"></script>
 
 </head>
 <body>
@@ -43,23 +39,26 @@
 					<span class="say">愿意为你去做每一件能让你开心快乐的事。</span><br> <span
 						class="say">所有我们经历的点点滴滴，</span><br> <span class="say">都是我们一辈子最美的回忆。</span><br>
 					<span class="say">我愿意爱你直到老去！</span><br> <br> <span
-						class="say"><span class="space"></span> -- Yours,
-						wuxia2001.</span>
+						class="say"><span class="space"></span> -- Yours,ZhaoQi-2018.10</span>
 				</div>
 			</div>
 			<div id="clock-box">
-				<a href="http://blog.csdn.net/wuxia2001" target="_blank">@赵琦</a>
-				与 <a href="http://blog.csdn.net/wuxia2001" target="_blank">@杨草原</a>
-				在一起的
+				<a href="http://blog.csdn.net/wuxia2001" target="_blank">@赵琦</a> 与 <a
+					href="http://blog.csdn.net/wuxia2001" target="_blank">@杨草原</a> 在一起的
 				<div id="clock"></div>
 			</div>
 			<canvas id="canvas" width="1100" height="680"></canvas>
 		</div>
-		<audio src="love.mp3" autoplay="autoplay"></audio>
+		<!-- <audio src="love.mp3" autoplay="autoplay"></audio> -->
 	</div>
 
 	<script>
-		
+	document.onkeydown = function (event) {
+        var e = event || window.event;
+        if (e && e.keyCode == 13) { //回车键的键值为13
+            $("#canvas").click(); //调用登录按钮的登录事件
+        }
+    };
 	</script>
 
 	<script>
@@ -231,7 +230,7 @@
 
 			var textAnimate = eval(Jscex.compile("async", function() {
 				var together = new Date();
-				together.setFullYear(2010, 5, 8);
+				together.setFullYear(2018, 9, 4);
 				together.setHours(20);
 				together.setMinutes(20);
 				together.setSeconds(0);
