@@ -11,5 +11,10 @@ public class TestAction {
 	public String test() {
 		return "home";
 	}
+	
+	@RequestMapping("/next.action")
+	public String next(String path) {
+		return path;
+	}
 
 }
