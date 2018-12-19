@@ -13,8 +13,8 @@ public class TestAction {
 	}
 	
 	@RequestMapping("/next.action")
-	public String next(String path) {
-		return path;
+	public String next() {
+		return "life";
 	}
 
 }

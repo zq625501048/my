@@ -7,6 +7,10 @@
 <title>hello</title>
 </head>
 <body>
-hello baby
+
+<%
+    //请求重定向
+    response.sendRedirect("/mylove/test.action");
+%>
 </body>
 </html>

@@ -1,11 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>love</title>
-<link type="text/css" rel="stylesheet" href="./js/default.css">
+<link type="text/css" rel="stylesheet" href="./css/default.css">
 <script type="text/javascript" src="./js/jquery.min.js"></script>
 <script type="text/javascript" src="./js/jscex.min.js"></script>
 <script type="text/javascript" src="./js/jscex-parser.js"></script>
@@ -15,6 +17,25 @@
 <script type="text/javascript" src="./js/jscex-async-powerpack.min.js"></script>
 <script type="text/javascript" src="./js/functions.js" charset="utf-8"></script>
 <script type="text/javascript" src="./js/love.js" charset="utf-8"></script>
+<c:set var="root" value="${pageContext.request.contextPath}" />
+
+<style type="text/css">
+body{margin:0;padding:0;background:#ffe;font-size:14px;font-family:'微软雅黑','宋体',sans-serif;color:#231F20;overflow:auto}
+a {color:#000;font-size:14px;}
+#main{width:100%;}
+#wrap{position:relative;margin:0 auto;width:1100px;height:680px;margin-top:10px;}
+#text{width:400px;height:425px;left:60px;top:80px;position:absolute;}
+#code{display:none;font-size:16px;}
+#clock-box {position:absolute;left:60px;top:550px;font-size:28px;display:none;}
+#clock-box a {font-size:28px;text-decoration:none;}
+#clock{margin-left:48px;}
+#clock .digit {font-size:64px;}
+#canvas{margin:0 auto;width:1100px;height:680px;}
+#error{margin:0 auto;text-align:center;margin-top:60px;display:none;}
+.hand{cursor:pointer;}
+.say{margin-left:5px;}
+.space{margin-right:150px;}
+</style>
 
 </head>
 <body>
@@ -40,26 +61,19 @@
 						class="say">所有我们经历的点点滴滴，</span><br> <span class="say">都是我们一辈子最美的回忆。</span><br>
 					<span class="say">我愿意爱你直到老去！</span><br> <br> <span
 						class="say"><span class="space"></span> -- Yours,ZhaoQi-2018.10</span>
+					<span
+						class="say"><span class="space"></span><a style="color:red" href ="${root }/next.action">》》开始我们的故事</a></span>
 				</div>
 			</div>
 			<div id="clock-box">
-				<a href="http://blog.csdn.net/wuxia2001" target="_blank">@赵琦</a> 与 <a
-					href="http://blog.csdn.net/wuxia2001" target="_blank">@杨草原</a> 在一起的
+				<a href="http://101.200.48.20/file/zq.jpg" target="_blank">@赵琦</a> 与 <a
+					href="http://101.200.48.20/file/ycy.jpg" target="_blank">@杨草原</a> 在一起的
 				<div id="clock"></div>
 			</div>
 			<canvas id="canvas" width="1100" height="680"></canvas>
 		</div>
-		<!-- <audio src="love.mp3" autoplay="autoplay"></audio> -->
+		<audio src="http://101.200.48.20/file/home.aac" autoplay="autoplay" loop="loop"></audio>
 	</div>
-
-	<script>
-	document.onkeydown = function (event) {
-        var e = event || window.event;
-        if (e && e.keyCode == 13) { //回车键的键值为13
-            $("#canvas").click(); //调用登录按钮的登录事件
-        }
-    };
-	</script>
 
 	<script>
 		(function() {
